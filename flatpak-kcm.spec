@@ -11,6 +11,7 @@ BuildRequires:	cmake(KF5Declarative)
 BuildRequires:	cmake(KF5KCMUtils)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(Qt5Svg)
+BuildRequires:	cmake(Qt5Test)
 BuildRequires:	pkgconfig(flatpak)
 
 %description
