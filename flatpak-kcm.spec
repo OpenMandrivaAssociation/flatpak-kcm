@@ -1,6 +1,6 @@
 Summary:		Flatpak Permissions Management KCM
 Name:		flatpak-kcm
-Version:		5.27.1
+Version:		5.27.2
 Release:		1
 License:       GPLv2+
 Group:		Graphical desktop/KDE
@@ -31,8 +31,6 @@ BuildRequires:	pkgconfig(flatpak)
 
 %files -f kcm_flatpak.lang
 %license LICENSES/*
-%dir %{_datadir}/kpackage/kcms/kcm_flatpak
 %{_libdir}/qt5/plugins/plasma/kcms/systemsettings/kcm_flatpak.so
-%{_datadir}/kpackage/kcms/kcm_flatpak/contents/ui/main.qml
-%{_datadir}/kpackage/kcms/kcm_flatpak/contents/ui/permissions.qml
+%{_datadir}/kpackage/kcms/kcm_flatpak
 %{_datadir}/applications/kcm_flatpak.desktop
