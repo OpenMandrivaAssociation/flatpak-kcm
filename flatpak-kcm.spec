@@ -1,6 +1,6 @@
 Summary:		Flatpak Permissions Management KCM
 Name:		flatpak-kcm
-Version:		5.27.6
+Version:		5.27.7
 Release:		1
 License:       GPLv2+
 Group:		Graphical desktop/KDE
