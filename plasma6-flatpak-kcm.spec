@@ -1,4 +1,4 @@
-%define git 20230819
+%define git 20230825
 
 Summary:	Flatpak Permissions Management KCM
 Name:		plasma6-flatpak-kcm
