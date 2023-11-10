@@ -1,8 +1,9 @@
-%define git 20231104
+%define stable %([ "$(echo %{version} |cut -d. -f2)" -ge 80 -o "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
+#define git 20231104
 
 Summary:	Flatpak Permissions Management KCM
 Name:		plasma6-flatpak-kcm
-Version:	5.240.0
+Version:	5.27.80
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -10,7 +11,7 @@ Url:		https://invent.kde.org/plasma/flatpak-kcm
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/plasma/flatpak-kcm/-/archive/master/flatpak-kcm-master.tar.bz2#/flatpak-kcm-%{git}.tar.bz2
 %else
-Source0:	http://download.kde.org/stable/plasma/%{version}/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/plasma/%{version}/flatpak-kcm-%{version}.tar.xz
 %endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF6Declarative)
