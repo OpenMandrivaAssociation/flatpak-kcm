@@ -24,7 +24,6 @@ BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(Qt6Svg)
 BuildRequires:	cmake(Qt6Test)
 BuildRequires:	pkgconfig(flatpak)
-BuildRequires:	plasma6-xdg-desktop-portal-kde
 
 %description
 %{summary}.
