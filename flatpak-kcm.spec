@@ -1,7 +1,7 @@
 Summary:		Flatpak Permissions Management KCM
 Name:		flatpak-kcm
-Version:		5.27.10
-Release:		2
+Version:		5.27.11
+Release:		1
 License:       GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://invent.kde.org/plasma/flatpak-kcm
