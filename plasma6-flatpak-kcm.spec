@@ -6,7 +6,7 @@
 Summary:	Flatpak Permissions Management KCM
 Name:		plasma6-flatpak-kcm
 Version:	6.3.4
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://invent.kde.org/plasma/flatpak-kcm
