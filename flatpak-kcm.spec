@@ -4,9 +4,9 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Summary:	Flatpak Permissions Management KCM
-Name:		plasma6-flatpak-kcm
+Name:		flatpak-kcm
 Version:	6.3.4
-Release:	%{?git:0.%{git}.}2
+Release:	%{?git:0.%{git}.}3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://invent.kde.org/plasma/flatpak-kcm
@@ -26,27 +26,17 @@ BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(Qt6Svg)
 BuildRequires:	cmake(Qt6Test)
 BuildRequires:	pkgconfig(flatpak)
+# Renamed after 6.0 2025-05-03
+%rename plasma6-flatpak-kcm
+
+BuildSystem:	cmake
+BuildOption:	-DBUILD_QCH:BOOL=ON
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 %{summary}.
 
-%prep
-%autosetup -p1 -n flatpak-kcm-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DBUILD_QCH:BOOL=ON \
-	-DBUILD_WITH_QT6:BOOL=ON \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-
-%find_lang kcm_flatpak
-
-%files -f kcm_flatpak.lang
+%files -f %{name}.lang
 %license LICENSES/*
 %{_qtdir}/plugins/plasma/kcms/systemsettings/kcm_flatpak.so
 %{_datadir}/applications/kcm_flatpak.desktop
