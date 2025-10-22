@@ -5,7 +5,7 @@
 
 Summary:	Flatpak Permissions Management KCM
 Name:		flatpak-kcm
-Version:	6.4.5
+Version:	6.5.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -38,5 +38,5 @@ BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %files -f %{name}.lang
 %license LICENSES/*
-%{_qtdir}/plugins/plasma/kcms/systemsettings/kcm_flatpak.so
-%{_datadir}/applications/kcm_flatpak.desktop
+%{_qtdir}/plugins/plasma/kcms/systemsettings/kcm_app-permissions.so
+%{_datadir}/applications/kcm_app-permissions.desktop
